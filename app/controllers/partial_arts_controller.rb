@@ -4,6 +4,18 @@ class PartialArts < Sinatra::Base
     def link_to_artist_show(artist)
       "<a href='/artists/#{artist.id}'>#{artist.first_name} #{artist.last_name}</a>"
     end
+
+    def artist_div(artist)
+      "<div class='artist'>
+        <img src='#{artist.image_url}' alt=''> <br>
+        <h3>#{link_to_artist_show(artist)}</h3>
+      </div>"
+    end
+
+    def link_to_home
+      "<a href='/'>Home</a>"
+    end
+
   end
 
   get '/' do

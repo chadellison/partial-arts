@@ -1,0 +1,8 @@
+<div class="category-statistics">
+  <h3>Category Stats</h3>
+  <% @category_statistics.each do |category, count| %>
+    <p>
+      <a href="http://wikipedia.org/wiki/<%= category.name %>"><%= category.name %></a>: <%= count %> artists
+    </p>
+  <% end %>
+</div>

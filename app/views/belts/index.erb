@@ -1,4 +1,5 @@
 <div class="jumbotron">
+  <%= link_to_home %>
   <h1>Belts</h1>
 </div>
 
@@ -6,10 +7,7 @@
   <h2><%= belt.color.capitalize %></h2>
   <div class="belt-<%= belt.color %> clearfix">
     <% belt.artists.each do |artist| %>
-      <div class="artist">
-        <img src="<%= artist.image_url %>" alt=""> <br>
-        <h3><%= link_to_artist_show(artist) %></a></h3>
-      </div>
+      <%= artist_div(artist) %>
     <% end %>
   </div>
 <% end %>

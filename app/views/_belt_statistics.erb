@@ -1,0 +1,8 @@
+<div class="belt-statistics">
+  <h3>Belt Stats</h3>
+  <% @belt_statistics.each do |belt, count| %>
+    <p>
+      <%= belt.color.capitalize %> belt: <%= count %> artists
+    </p>
+  <% end %>
+</div>

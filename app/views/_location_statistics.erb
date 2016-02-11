@@ -1,0 +1,8 @@
+<div class="hometown-statistics">
+  <h3>Hometown Stats</h3>
+  <% @location_statistics.each do |location, count| %>
+    <p>
+      <a href="http://wikipedia.org/wiki/<%= location %>"><%= location %></a>: <%= count %> artists
+    </p>
+  <% end %>
+</div>

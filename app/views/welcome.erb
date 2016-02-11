@@ -6,29 +6,8 @@
 <a href="/belts">Artists by Belt Color</a> <br>
 <a href="/categories">Artists by Category</a> <br>
 
-<div class="belt-statistics">
-  <h3>Belt Stats</h3>
-  <% @belt_statistics.each do |belt, count| %>
-    <p>
-      <%= belt.color.capitalize %> belt: <%= count %> artists
-    </p>
-  <% end %>
-</div>
+<%= erb :_belt_statistics %>
 
-<div class="category-statistics">
-  <h3>Category Stats</h3>
-  <% @category_statistics.each do |category, count| %>
-    <p>
-      <a href="http://wikipedia.org/wiki/<%= category.name %>"><%= category.name %></a>: <%= count %> artists
-    </p>
-  <% end %>
-</div>
+<%= erb :_category_statistics %>
 
-<div class="hometown-statistics">
-  <h3>Hometown Stats</h3>
-  <% @location_statistics.each do |location, count| %>
-    <p>
-      <a href="http://wikipedia.org/wiki/<%= location %>"><%= location %></a>: <%= count %> artists
-    </p>
-  <% end %>
-</div>
+<%= erb :_location_statistics %>
